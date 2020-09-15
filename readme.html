@@ -1,0 +1,50 @@
+<html>
+<head>
+    <h1>readme.html file - Dan Feldman 204433965</h1>
+</head>
+<body>
+    <h3>Store name:</h3>
+    <p>Wish-Wash.</p>
+
+    <h3>What are you selling?</h3>
+    <p>Laundry and washing services.</p>
+
+    <h3>What additional page(s) did you add? How to operate them?</h3>
+    <p>In addition to the store, that enables adding and removing from the cart and buying in varing quantities, and interactively shows the total amount to pay,</br>
+      I added an about page that explains about the company, the services, and how to purchase in the website, available in the upper bar.</br>  
+      I also added an admin interface which is enabled when the user logged in to the system is the admin, which, with a click of a button, shows all the purchases users had made.</br>
+      In addition I added a 'Contact Us' page that allows the client to keep in touch with the company, which is also available in the upper bar.</p>
+    
+    <h3>What was hard to do?</h3>
+    <p>The hardest thing to do was to combine in the backend the express server and the redis client,</br>
+        Then it was hard to make sure the frontend works smoothly with the backend, and closing security gaps.</p>
+    
+    <h3>Who is your partner? name and id. What did you do? What did your partner do?</h3>
+    <p>I worked alone and did all by myself. It was more difficult then working in a team, but
+        I learned a lot from it, since I did all the work.</p>
+
+    <h3>Specify all the different route your app supports:</h3>
+    <p>For a new user:</br>
+     1. Go to /login.html, then sign up and return to /login.html</br>
+     2. Log in to the system via the button, you will be automatically transferd to the /store.html.</br>
+     3. Purchase in the store via 'add to cart' button near the product, change the quantity and remove products as you like.</br>
+     4. When you done press the 'PURCHASE' button in the end of the page.</br>
+     5. Whenever you like you can press the 'about' in the upper bar in order to read more about the company.</br>
+     6. Whenever you like you can press the 'contcat us' in order to keep in touch with the team.</br>
+     7. If you are logged in as the admin (user: admin, password: admin. found in the system by default). go to the 'Admin Interface' by clicking on the upper bar in the store. /index.html will be openned.</br>
+     8. In the Admin Interface click on 'Load Log' and see all users purchases.</br>
+     9. In any time you can logout from the system by pressing on Logout in the upper bar.</p>
+
+    <h3>How did you make your store secured?</h3>
+    <p>If a user is not logged in he cannot reach the store, and he is redirected to the login page.</br>
+        Only a user that is logged in can purchase in the store.</br>
+        Any logged in user is provided with a cookie. With the cookie a user can retrive its username, but cannot recieve the password which is stored in a diffrent DB for security reasons.</br>
+        Only with the sysAdmin user can aproach the Admin Interface via the store through the link.</br>
+        The admin can't load the log in admin interface without a cookie.</br>
+        If somehow a user without permissions trys to load the log, he will be blocked by another security wall based on the provided cookie, which will not load the log, and user will be redirected to login page after alert of appropriate message.</br>
+        The sysAdmin user is found in the system by default, and no one can sign in a new user with the same name since the 'sign in' mechanism does not allow it.</p>
+   
+    <h3>Did you implement the store using react.js?</h3>
+    <p>No.</p>
+</body>
+</html>
